@@ -10,4 +10,16 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  optimizeDeps: {
+    include: [
+      'react-router-dom',
+      // other dependencies
+    ],
+  },
+  build: {
+    rollupOptions: {
+      external: ['react-router-dom'],
+    },
+  },
 });
+
